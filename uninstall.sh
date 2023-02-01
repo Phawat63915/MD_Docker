@@ -7,5 +7,5 @@ sudo rm -rf /etc/docker
 sudo rm -rf /var/run/docker.sock
 sudo rm -rf /var/run/docker.pid
 sudo rm -rf /var/run/docker
-sudo rm -rf /var/run/docker.sock
-sudo rm -rf /var/run/docker.pid
+apt remove docker* -y
+apt autoremove docker* -y
