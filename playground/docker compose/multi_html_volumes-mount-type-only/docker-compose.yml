@@ -1,5 +1,9 @@
 version: "3.9"
 # compose file for nginx
+#
+# https://docs.docker.com/storage/bind-mounts/
+#
+
 services:
   nginx_main:
     build:
