@@ -1,0 +1,46 @@
+version: "3.9"
+# compose file for nginx
+services:
+  nginx_main:
+    build:
+      context: ./proxyng
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+  backend_node1:
+    image: nginx
+    volumes:
+      - ./web_backend/node1/html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "5081:80"
+  backend_node2:
+    image: nginx
+    volumes:
+      - ./web_backend/node2/html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "5082:80"
+  client_weba:
+    image: nginx
+    volumes:
+      - ./web_client/weba/html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "8081:80"
+  client_webb:
+    image: nginx
+    volumes:
+      - ./web_client/webb/html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "8082:80"
+  client_webc:
+    image: nginx
+    volumes:
+      - ./web_client/webc/html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "8083:80"
+

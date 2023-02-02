@@ -1,0 +1,32 @@
+version: "3.9"
+# compose file for nginx
+services:
+  nginx_main:
+    image: nginx
+    volumes:
+      - ./proxyng/default.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+    ports:
+      - "80:80"
+  weba:
+    image: nginx
+    volumes:
+      - ./html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "8081:80"
+  webb:
+    image: nginx
+    volumes:
+      - ./html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "8082:80"
+  webc:
+    image: nginx
+    volumes:
+      - ./html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "8083:80"
+
