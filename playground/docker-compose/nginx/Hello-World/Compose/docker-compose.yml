@@ -1,0 +1,10 @@
+version: "3.9"
+# compose file for nginx
+services:
+  nginx_main:
+    image: nginx
+    volumes:
+      - ./html:/usr/share/nginx/html
+    restart: always
+    ports:
+      - "8080:80"
