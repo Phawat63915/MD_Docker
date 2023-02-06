@@ -16,7 +16,7 @@ docker run --name hello_world -d -p 8080:80 nginx
 ```bash
 docker ps -a
 ```
-*__OUT: ผลลัพธ์ที่ได้จะเป็น__* 👇
+*__OUTPUT: ผลลัพธ์ที่ได้จะเป็น__* 👇
 ```log
 CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                                                        NAMES
 8b2232a77ac1   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, :::8080->8 
@@ -30,7 +30,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS   
 ```bash
 curl http://localhost:8080
 ```
-*__OUT: ผลลัพธ์ที่ได้จะเป็น__* 👇
+*__OUTPUT: ผลลัพธ์ที่ได้จะเป็น__* 👇
 ```log
 <!DOCTYPE html>
 <html>
@@ -70,7 +70,7 @@ Commercial support is available at
 docker exec -it hello_world /bin/bash
 ```
 
-เปลี่ยนไฟล์ index.html ของ Container nginx ที่เราสร้าง เป็น Hello World โดยการใช้คำสั่ง
+เปลี่ยนไฟล์ index.html ของ Container nginx ที่เราสร้าง เป็น `Hello World` ที่ไฟล์ index.html โดยการใช้คำสั่ง
 และ Save ไฟล์ด้วยการกด Ctrl + X และกด Y และกด Enter
 
 #### **4.1 เข้าไปแก้ด้วยคำสั่ง** ใน Container ที่เราเข้าไป
