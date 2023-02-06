@@ -1,7 +1,7 @@
 
 > Note: ขั้นตอนต่อไปนี้เป็นขั้นตอนที่เรามี Docker ในเครื่องแล้ว
 
-**1. สร้าง Container ด้วยคำสั่ง**
+#### **1. สร้าง Container ด้วยคำสั่ง**
 
 `docker run --name <CONTAINNE_NAME> -d -p 8080:80 <IMAGE_NAME>`
 
@@ -11,7 +11,7 @@
 docker run --name hello_world -d -p 8080:80 nginx
 ```
 
-**2. ตรวจสอบ Container ที่สร้าง**
+#### **2. ตรวจสอบ Container ที่สร้าง**
 
 ```bash
 docker ps -a
@@ -22,7 +22,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS   
 8b2232a77ac1   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, :::8080->8 
 ```
 
-**3. ตรวจสอบว่า Container ที่สร้าง สามารถเข้าถึงได้หรือไม่**
+#### **3. ตรวจสอบว่า Container ที่สร้าง สามารถเข้าถึงได้หรือไม่**
 
 เราสามารถเข้าถึงผ่าน Browser ได้โดยการเข้าที่ http://localhost:8080
 
