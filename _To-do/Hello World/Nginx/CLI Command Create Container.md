@@ -19,7 +19,7 @@ docker run --name hello_world -d -p 8080:80 nginx
 ```bash
 docker ps -a
 ```
-__OUTPUT: ผลลัพธ์ที่ได้จะเป็น__ 👇
+_OUTPUT: ผลลัพธ์ที่ได้จะเป็น_ 👇
 ```log
 CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                                                        NAMES
 8b2232a77ac1   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, :::8080->8 
@@ -33,7 +33,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS   
 ```bash
 curl http://localhost:8080
 ```
-__OUTPUT: ผลลัพธ์ที่ได้จะเป็น__ 👇
+_OUTPUT: ผลลัพธ์ที่ได้จะเป็น_ 👇
 ```log
 <!DOCTYPE html>
 <html>
